@@ -619,7 +619,7 @@ class koneAdaptor:
                 "request_id": 1,
                 "area": current_source_floor_areaID,
                 "time": datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat(),
-                "terminal": self.liftTerminalList[0],
+                "terminal": self.liftTerminalList[1],
                 "call": { 
                     "action": 2, 
                     "destination": current_dest_areaID,
@@ -712,7 +712,7 @@ class koneAdaptor:
                 "request_id": 1,
                 "area": source_floor_areaID,
                 "time": datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat(),
-                "terminal": self.liftTerminalList[0],
+                "terminal": self.liftTerminalList[1],
                 "call": { 
                     "action": action_type, 
                     "allowed_lifts": [lift_selected],
@@ -736,7 +736,7 @@ class koneAdaptor:
                 "request_id": 1,
                 "area": lift_selected,
                 "time": datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat(),
-                "terminal": self.liftTerminalList[0],
+                "terminal": self.liftTerminalList[1],
                 "call": { 
                     "action": 5000, 
                     "destination": source_floor_areaID
