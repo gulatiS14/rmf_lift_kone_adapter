@@ -8,9 +8,11 @@ RUN apt-get update && apt-get install -y python3-pip && \
 
 # Clone the repository
 WORKDIR /opt/rmf/src
+RUN mkdir -p /kone-ros-api
+
 RUN echo 'Checking out GIT version of repo:' main && \
     git clone https://github.com/open-rmf/rmf_internal_msgs.git && \
-    git clone https://github.com/sharp-rmf/kone-ros-api.git && \
+    git clone https://github.com/gulatiS14/rmf_lift_kone_adapter.git kone-ros-api && \
     cd kone-ros-api && \
     git checkout main
 
